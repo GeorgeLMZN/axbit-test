@@ -1,0 +1,37 @@
+{
+  "name": "axbit-task",
+  "version": "1.0.0",
+  "description": "test-task for axbit INc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "author": "GeorgeLMZN",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.6",
+    "@vue/compiler-sfc": "^3.2.16",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.3.0",
+    "hot-module-replacement": "^3.0.4",
+    "html-webpack-plugin": "^5.3.2",
+    "http-server": "^13.0.2",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "vue-loader": "^15.9.8",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}
