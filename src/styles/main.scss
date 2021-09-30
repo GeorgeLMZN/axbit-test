@@ -1,3 +1,172 @@
-html {
-    background-color: #000;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: purple;
+    color: #fff;
+    letter-spacing: 2px;
+    #root {
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+    }
+    .app-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .clock {
+            font-size: 30px;
+        }
+    }
+    .main-btn {
+        border: 1px solid #fff;
+        text-decoration: none;
+        text-align: center;
+        background: none;
+        margin: 5px;
+        padding: 10px 20px;
+        width: 150px;
+        text-transform: uppercase;
+        color: inherit;
+        cursor: pointer;
+        &:hover {
+            background: #fff;
+            color: #000;
+            transition: all .5s;
+            border: 1px solid #000;
+        }
+    }
+    .back-btn {
+        width: fit-content;
+        border-radius: 50%;
+        padding: 10px;
+        position: fixed;
+        left: 0;
+        top: -100%;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        &:hover {
+            border: 1px solid #000;
+            svg {
+                polyline,
+                line {
+                    stroke: #000000;
+                }
+            }
+        }
+    }
+    .weather {
+        &-form-wrapper {
+            display: flex;
+        }
+        &-form {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #fff;
+            margin-right: 3px;
+            box-sizing: border-box;
+            input {
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid #fff;
+                font-size: 22px;
+                color: #fff;
+                padding: 10px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                max-height: 50px;
+            }
+        }
+        &-results {
+            align-items: center;
+            border: 1px solid #fff;
+            margin-left: 3px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+@media  screen and (max-width: 880px) {
+        body {
+
+        .weather-form {
+            display: flex;
+            flex-direction: column;
+            margin-right: 0;
+            width: 100%;
+            margin: 10px;
+        }
+        .weather-form-wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        .weather-results {
+            margin-top: 20px;
+            margin-left: 0;
+            width: 100%;
+            margin: 10px;
+        }
+    }
+}
+@media  screen and (max-width: 600px) {
+    body {
+        #root {
+            max-width: 80%;
+        }
+    }
+}
+
+@media  screen and (max-width: 350px) {
+    body {
+        #root {
+            input {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.top {
+    animation: appearTop 1s 1;
+}
+.bottom {
+    animation: appearBottom 1s 1;
+}
+.left {
+    animation: appearLeft 1s 1;
+}
+.right {
+    animation: appearRight 1s 1;
+}
+
+@keyframes appearLeft {
+    0% {transform: translateX(-100%); opacity: 0;}
+    100% {transform: translateX(0%); opacity: 1;}
+}
+
+@keyframes appearRight {
+    0% {transform: translateX(100%); opacity: 0;}
+    100% {transform: translateX(0%); opacity: 1;}
+}
+
+@keyframes appearBottom {
+    0% {transform: translateY(100%); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
+}
+@keyframes appearTop {
+    0% {transform: translateY(-100%); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
 }

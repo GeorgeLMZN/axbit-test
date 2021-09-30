@@ -1,19 +1,26 @@
-// index.js
-// создание свойства класса без конструктора
-import './styles/main.scss'
-class Game {
-    name = 'Violin Charades'
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import './styles/main.scss';
+const Controller = require("./controller");
+import Router from './router';
+
+
+const RouterApp = new Router();
+
+class App {
+    constructor (elem) {
+        this.elem = elem;
+    }
+    init () {
+        const AppController = new Controller (this.elem);
+        RouterApp.init();
+        AppController.printGreeting(this.elem);
+    }
 }
-const myGame = new Game()
 
-// создаем параграф
-const p = document.createElement('p')
-p.textContent = `I like ${myGame.name}.`
 
-// создаем элемент заголовка
-const heading = document.createElement('h1')
-heading.textContent = 'Как интересно!'
+const root = document.querySelector('#root');
 
-// добавляем параграф и заголовок в DOM
-const root = document.querySelector('#root')
-root.append(heading, p)
+const newApp = new App (root);
+
+newApp.init();

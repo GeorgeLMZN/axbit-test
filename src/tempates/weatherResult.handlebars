@@ -1,0 +1,29 @@
+     <div class="city-ico">
+               <img src="{{weatherIco}}" alt="">
+               <span>Ваш город {{city}}</span>
+     </div>
+     <div class="other-info">
+          <span>Сегодня {{ description }};</span>
+          <span>Температура воздуха: {{ temp }} C;</span>
+          <span>Скорость ветра - {{ windSpeed }} m/s;</span>
+          <style>
+            .city-ico {
+                 width: 100%;
+                display: flex !important;
+                align-items: center;
+            }
+        
+            .other-info {
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+                 margin-left: 20px;
+                 margin-top: -5px;
+            }
+        </style>
+     </div>
+
+
+
+
+ 
